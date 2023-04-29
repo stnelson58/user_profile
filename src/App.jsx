@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 
 
 import './App.css'
@@ -9,14 +9,16 @@ import {userData} from './utils/users.js';
 
 function App() {
   //const [count, setCount] = useState(0)
+  const [users,setUsers] = useState([]);
+
   console.log(userData);
 
   return (
     
       <div className='App'>
         
-        < Header />
-        < HomePage userData={userData}/>
+        < Header userData={userData} setUsers={setUsers} />
+        < HomePage users={users}/>
     
         
     </div>
